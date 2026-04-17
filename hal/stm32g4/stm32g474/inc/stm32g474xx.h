@@ -184,7 +184,6 @@ typedef enum
 
 #include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
 #include "system_stm32g4xx.h"
-//#include "hal/gen/stm32g474xx.h"
 #include <stdint.h>
 
 /** @addtogroup Peripheral_registers_structures

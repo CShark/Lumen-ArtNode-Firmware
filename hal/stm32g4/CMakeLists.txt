@@ -2,6 +2,7 @@
 add_library(stm32g4 INTERFACE)
 target_link_libraries(stm32g4 INTERFACE
     cmsis
+    logger
 )
 target_include_directories(stm32g4 INTERFACE
     inc
