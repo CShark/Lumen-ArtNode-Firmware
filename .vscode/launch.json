@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "preLaunchTask": "CMake: build",
+            "type": "probe-rs-debug",
+            "request": "launch",
+            "name": "ArtNode V2",
+            "flashingConfig": {
+                "flashingEnabled": true
+            },
+            "chip": "STM32G474RETx",
+            "coreConfigs": [
+                {
+                    "programBinary": "build/Debug/boards/artnode-v2/artnode_v2.elf",
+                    "svdFile": "hal/stm32g4/stm32g474/STM32G474.svd",
+                    "rttEnabled": true,
+                    "rttChannelFormats": [
+                        {
+                            "channelNumber": 0,
+                            "dataFormat": "String",
+                            "showTimestamps": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
