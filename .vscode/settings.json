@@ -1,0 +1,6 @@
+{
+    "C_Cpp.default.cppStandard": "c++26",
+    "C_Cpp.default.cStandard": "c23",
+    "C_Cpp.default.intelliSenseMode": "gcc-arm",
+    "C_Cpp.default.compilerPath": "arm-none-eabi-gcc"
+}
