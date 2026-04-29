@@ -1,0 +1,88 @@
+Permission is hereby granted, free of charge, to any person obtaining a copy of 
+this hardware and/or software (the "Work"), to use, modify, and distribute the 
+Work, subject to the following conditions:
+
+1. Sharing Modifications
+
+If you share or distribute the Work or any modified versions of it, you must:
+
+a)	Include all source code, design files, documentation and any dependencies
+	required to reproduce and use the modified Work. For dependencies licensed
+	under third-party open-source licenses, providing the official name, version,
+	and a link to the source shall suffice if the license of the dependency
+	prohibits redistribution under these terms. All original components of the
+	Work must be provided in an editable format.
+
+b)	Clearly state the changes made to the original Work.
+
+c)	Retain original attribution and clearly attribute modifications to their 
+	respective authors.
+
+d)	Distribute the Work under the same terms as this license.
+
+2. Non-Commercial Use and Distribution
+
+The device may only be used for Non-commercial use.
+
+a)	Non-commercial use refers to use that does not involve the exchange of 
+	money, goods, services, or other benefits in connection with the 
+	distribution, manufacturing, modifying or licensing of the Work or its 
+	derivatives.
+
+b)	Recoverable costs must be limited to direct material cost excluding labor 
+	and assembly cost, and documentation substantiating these costs must be 
+	provided upon request.
+
+c)	Commercial use of the Work is limited strictly to applications where the 
+	Work is not sold, lent, leased, or otherwise distributed in any form to 
+	third parties.
+
+d) 	Service Provision: The use of the Work to provide services to third parties
+	via a network (e.g., Software-as-a-Service, remote API access) in exchange
+	for financial compensation or other commercial benefits is considered
+	Commercial Use and is prohibited under this license.
+
+3. Sublicensing
+
+a)	Any derivative work or combination involving the Work, in whole or part, 
+	must be distributed under the same terms as this license, and all 
+	contributors must be attributed.
+
+4. Liability and Warranty
+
+THE WORK IS PROVIDED "AS IS," WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A 
+PARTICULAR PURPOSE, OR NON-INFRINGEMENT. THE 
+AUTHORS AND CONTRIBUTORS DISCLAIM ANY LIABILITY ARISING FROM PHYSICAL DAMAGE, 
+INJURY, OR OTHER HARM CAUSED BY THE USE OR MISUSE OF THE HARDWARE, ITS 
+DERIVATIVES, OR ASSOCIATED DOCUMENTATION.
+
+Some jurisdictions may not allow the exclusion of certain warranties or 
+liabilities. In such cases, the limitations in this section apply to the 
+maximum extent permitted by applicable law.
+
+5. Trademark and Identity
+
+This license does not grant permission to use the trade names, trademarks, service
+marks, or product names of the original Licensor, except as required for reasonable
+and customary use in describing the origin of the Work and reproducing the content
+of the attribution notice. Any derivative work must be clearly labeled to avoid
+confusion with the original Work.
+
+6. Governing Law
+
+This license shall be governed by and construed in accordance with the laws of Germany.
+Any disputes arising under this license shall be subject to the exclusive jurisdiction
+of the courts in Stuttgart.
+
+
+By obtaining, using, modifying, or distributing the Work, you acknowledge and 
+agree to the terms of this license. For distribution, you must include a copy 
+of this license with the Work and make reasonable efforts to ensure recipients 
+are aware of its terms for example by providing the license in a README or 
+separate LICENSE file.
+
+Any use, modification, or distribution of the Work in violation of this license 
+immediately terminates your rights under this license. Continued use of the 
+Work following termination is prohibited unless explicitly reinstated by the 
+original copyright holder.
