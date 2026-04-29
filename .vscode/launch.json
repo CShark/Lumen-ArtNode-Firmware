@@ -2,6 +2,15 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "debugpy",
+            "name": "stm32-gen",
+            "request": "launch",
+            "console": "integratedTerminal",
+            "program": "tools/stm32-gen.py",
+            "cwd": "${workspaceFolder}/hal",
+            "args": ["STM32G474"]
+        },
+        {
             "preLaunchTask": "CMake: build",
             "type": "probe-rs-debug",
             "request": "launch",

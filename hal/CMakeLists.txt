@@ -45,6 +45,9 @@ add_library(hal INTERFACE)
 target_include_directories(hal INTERFACE
     hal-core/inc
 )
+target_sources(hal INTERFACE
+    hal-core/src/systick.cpp
+)
 
 # Supported chip families
 add_subdirectory(stm32g4)

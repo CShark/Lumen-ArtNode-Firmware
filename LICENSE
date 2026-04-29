@@ -1,0 +1,73 @@
+Permission is hereby granted, free of charge, to any person obtaining a copy of 
+this hardware and/or software (the "Work"), to use, modify, and distribute the 
+Work, subject to the following conditions:
+
+1. Sharing Modifications
+
+If you share or distribute the Work or any modified versions of it, you must:
+
+a)	Include all source code, design files, documentation and any dependencies 	
+	required to reproduce and use the modified Work, regardless of the extent 
+	or significance of the changes. These resources must be provided in a 
+	publicly accessible repository or upon request within 30 days.
+		Design files include all schematics, PCB layouts, bill of materials, 	
+		manufacturing instructions, and similar resources necessary to 
+		reproduce the hardware. Documentation includes technical manuals, user 
+		guides, and any other related materials. The design files and 
+		documentation have to be provided in an editable format.
+
+b)	Clearly state the changes made to the original Work.
+
+c)	Retain original attribution and clearly attribute modifications to their 
+	respective authors.
+
+d)	Distribute the Work under the same terms as this license.
+
+2. Non-Commercial Use and Distribution
+
+The device may only be used for Non-commercial use.
+
+a)	Non-commercial use refers to use that does not involve the exchange of 
+	money, goods, services, or other benefits in connection with the 
+	distribution, manufacturing, modifying or licensing of the Work or its 
+	derivatives.
+
+b)	Recoverable costs must be limited to direct material cost excluding labor 
+	and assembly cost, and documentation substantiating these costs must be 
+	provided upon request.
+
+c)	Commercial use of the Work is limited strictly to applications where the 
+	Work is not sold, lent, leased, or otherwise distributed in any form to 
+	third parties.
+
+3. Sublicensing
+
+a)	Any derivative work or combination involving the Work, in whole or part, 
+	must be distributed under the same terms as this license, and all 
+	contributors must be attributed.
+
+4. Liability and Warranty
+
+THE WORK IS PROVIDED "AS IS," WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A 
+PARTICULAR PURPOSE, OR NON-INFRINGEMENT. THE 
+AUTHORS AND CONTRIBUTORS DISCLAIM ANY LIABILITY ARISING FROM PHYSICAL DAMAGE, 
+INJURY, OR OTHER HARM CAUSED BY THE USE OR MISUSE OF THE HARDWARE, ITS 
+DERIVATIVES, OR ASSOCIATED DOCUMENTATION.
+
+Some jurisdictions may not allow the exclusion of certain warranties or 
+liabilities. In such cases, the limitations in this section apply to the 
+maximum extent permitted by applicable law.
+
+
+
+By obtaining, using, modifying, or distributing the Work, you acknowledge and 
+agree to the terms of this license. For distribution, you must include a copy 
+of this license with the Work and make reasonable efforts to ensure recipients 
+are aware of its terms for example by providing the license in a README or 
+separate LICENSE file.
+
+Any use, modification, or distribution of the Work in violation of this license 
+immediately terminates your rights under this license. Continued use of the 
+Work following termination is prohibited unless explicitly reinstated by the 
+original copyright holder.

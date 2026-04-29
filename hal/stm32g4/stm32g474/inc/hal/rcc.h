@@ -1,11 +1,14 @@
 #pragma once
-#include "hal/rcc-core.h"
+#include "hal/core/rcc.h"
+#include "hal/systick.h"
 #include "hal/utils.h"
 #include "logger.h"
 #include "stm32g474xx.h"
 #include "system_stm32g4xx.h"
 #include <concepts>
 #include <cstdint>
+#include <initializer_list>
+#include <cstdio>
 
 namespace hal::rcc {
     template <typename T>
@@ -33,6 +36,46 @@ namespace hal::rcc {
         { T::sysClkSrcFlag } -> std::convertible_to<uint32_t>;
         { T::sysClkStatusFlag } -> std::convertible_to<uint32_t>;
         { T::enable() } -> std::same_as<void>;
+    };
+
+    template <uint32_t srcFreq, uint32_t dstFreq>
+    struct PllAutoSolver {
+        struct Result {
+            uint32_t m, n, r;
+            uint32_t error;
+            bool valid;
+        };
+
+        static consteval Result solve() {
+            Result best{0, 0, 0, UINT32_MAX, false};
+
+            for (uint32_t m = 1; m <= 16; m++) {
+                auto pll_in = srcFreq / m;
+
+                if (pll_in < 2'660'000 || pll_in > 16'000'000)
+                    continue;
+
+                for (uint32_t n = 8; n <= 127; n++) {
+                    auto vco = pll_in * n;
+                    if (vco < 96'000'000 || vco > 344'000'000)
+                        continue;
+
+                    for (uint32_t r : {2u, 4u, 6u, 8u}) {
+                        auto sys = vco / r;
+                        auto error = (sys > dstFreq) ? (sys - dstFreq) : (dstFreq - sys);
+
+                        if (error < best.error) {
+                            best = {m, n, r, error, true};
+
+                            if (error == 0)
+                                return best;
+                        }
+                    }
+                }
+            }
+
+            return best;
+        }
     };
 
     struct HSI {
@@ -116,6 +159,27 @@ namespace hal::rcc {
         }
     };
 
+    template <PllClkSrcTrait Source, HzTrait Target>
+    struct PLLAuto {
+    private:
+        static constexpr auto result = PllAutoSolver<Source::freq, Target::hz>::solve();
+
+        static_assert(result.valid, "No valid PLL configuration found");
+
+    public:
+        static constexpr uint32_t m = result.m;
+        static constexpr uint32_t n = result.n;
+        static constexpr uint32_t r = result.r;
+        static constexpr uint32_t q = 2;
+        static constexpr uint32_t p = 2;
+
+        static constexpr uint32_t vco = Source::freq * n / m;
+
+        static inline void init() {
+            PLL<Source, m, n, r, q, p>::init();
+        }
+    };
+
     template <PllTrait T>
     struct PLLR {
         static constexpr uint32_t freq = T::vco / T::r;
@@ -154,6 +218,9 @@ namespace hal::rcc {
     template <PllTrait PLL, SysClkSrcTrait SysClockSource>
     struct ClockConfig {
         static_assert(SysClockSource::freq >= 8'000'000 && SysClockSource::freq <= 170'000'000, "SysClk must be between 8MHz and 170MHz");
+
+        static constexpr uint32_t sysclk = SysClockSource::freq;
+        static constexpr uint32_t pclk = SysClockSource::freq;
 
         /// @brief Initialize the Clocktree
         static void init() {

@@ -1,0 +1,4 @@
+[submodule "hal/tools/stm32-data-generated"]
+	path = hal/tools/stm32-data-generated
+	url = https://github.com/embassy-rs/stm32-data-generated.git
+	branch = main

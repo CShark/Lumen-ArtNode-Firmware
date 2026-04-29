@@ -10,7 +10,7 @@ target_include_directories(stm32g4 INTERFACE
 target_sources(stm32g4 INTERFACE
     src/syscalls.c
     src/system_stm32g4xx.c
-    src/hal/systick.cpp
+    src/hal/rcc.cpp
 )
 
 # STM32G474
@@ -20,6 +20,7 @@ target_link_libraries(stm32g474 INTERFACE
 )
 target_include_directories(stm32g474 INTERFACE
     stm32g474/inc
+    ../gen/stm32g474/inc
 )
 target_sources(stm32g474 INTERFACE
     stm32g474/src/startup_stm32g474xx.s

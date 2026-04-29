@@ -61,12 +61,9 @@ namespace logger {
         SEGGER_RTT_WriteString(0, timestamp);
         SEGGER_RTT_WriteString(0, logLevel);
         SEGGER_RTT_WriteString(0, msg);
-
         SEGGER_RTT_WriteString(0, " \033[90m(");
         SEGGER_RTT_WriteString(0, source.file_name());
-        SEGGER_RTT_WriteString(0, " > ");
-        SEGGER_RTT_WriteString(0, source.function_name());
-        SEGGER_RTT_WriteString(0, ": ");
+        SEGGER_RTT_WriteString(0, ":");
         SEGGER_RTT_WriteString(0, linenumber);
         SEGGER_RTT_WriteString(0, ")\033[90m\n");
     }
